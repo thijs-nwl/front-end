@@ -1,0 +1,126 @@
+/*alles voor 250px*/
+#Prcontainer * {
+	min-width: 40vw;
+	max-width: 92%;
+	height: auto;
+	margin: 3px;
+}
+
+#Prcontainer:first-child {
+	margin-top: 400px;
+}
+
+#Prcontainer {
+	margin-top: 45px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+@media screen and (min-width: 918px)  {
+	#Prcontainer * {
+		margin: 10px;
+		min-width: 32%;
+	}
+
+}
+
+@media screen and (min-width: 450px) and (max-width: 600px) {
+	#Prcontainer * {
+		min-width: 80%;
+		margin: 5px;
+	}
+}
+
+/*MODAL STYLES*/
+
+body {
+overflow: auto;
+height: 100vh;
+
+}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: absolute; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 102%; /* Full width */
+height: 145vh; /* Full height */
+/* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+position: relative;
+background-color: #fefefe;
+margin: auto;
+padding: 0;
+border: 1px solid #888;
+width: 80%;
+
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+color: white;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.modal-header {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+.modal-body {
+margin: 0 auto;
+}
+
+.modal-body #_img {
+display: block;
+margin: 0 auto;
+
+}
+.modal-footer {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+#myBtn{
+background-image: url('images/img1.png');
+
+}

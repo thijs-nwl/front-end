@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nothing</title>
+  </head>
+  <style>
+    :root{
+      --pad: 30px;
+    }
+
+    .knop {
+      padding: var(--pad)
+    }
+  </style>
+  <body>
+    <button class="knop" data-num="0">Pro1</button>
+    <button class="knop" data-num="1">Pro2</button>
+    <button class="knop" data-num="2">Pro3</button>
+    <button class="knop" data-num="3">Pro4</button>
+    <button class="knop" data-num="4">Pro5</button>
+    <button class="knop" data-num="5">Pro6</button>
+
+    <div id='trgt'>change this</div>
+    <div id='trgt1'>change this</div>
+  </body>
+  <script>
+      var trgt = document.getElementById('trgt');
+      var trgt1 = document.getElementById('trgt1');
+      var classL = document.getElementsByClassName('knop');
+      var db = [];
+
+      var Pros = {
+         Pro1 : {
+              title: "Product1",
+              zin: "is mooi"
+          },
+         Pro2 : {
+              title: "Product2",
+              zin: "is mooi1"
+          },
+         Pro3 : {
+              title: "Product3",
+              zin: "is mooi2"
+          },
+         Pro4 : {
+              title: "Product4",
+              zin: "is mooi3"
+          },
+         Pro5 : {
+              title: "Product5",
+              zin: "is mooi4"
+          },
+          Pro6 : {
+              title:'Product6',
+              zin: "is mooi5"
+          }
+      }
+
+      for(i = 0; i < classL.length; i++){
+        var num = i+1;
+        var lock ='Pro'+num;
+        db.push(lock);
+        classL[i].addEventListener('click', function(){
+          klik(this)
+        });
+      };
+
+      function klik (data) {
+        var y = parseInt(data.getAttribute('data-num'));
+        trgt.innerHTML = Pros[db[y]].title;
+        trgt1.innerHTML = Pros[db[y]].zin;
+      }
+  </script>
+</html>

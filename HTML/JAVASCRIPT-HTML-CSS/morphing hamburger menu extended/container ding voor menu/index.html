@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+	<input type="checkbox" id="cb">
+</div>
+
+<a href="#blalalla"><div id="box1">
+	box1
+</div></a>
+</body>
+<script>
+cb.onclick = function (){
+var container = document.getElementById("container");
+var cb = document.getElementById("cb");
+var box = document.getElementById('box1');
+
+container.style.backgroundColor = "green";
+
+	if(cb.checked == true){
+		container.style.visibility = "visible";
+		cb.style.opacity = 1;
+		container.style.zIndex = '2';
+		box.style.zIndex = '1';
+	} else {
+		container.style.visibility = "hidden";
+		container.style.zIndex = '1';
+		box.style.zIndex = '2';
+	}
+}
+
+</script>
+</html>

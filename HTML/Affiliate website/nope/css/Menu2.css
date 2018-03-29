@@ -1,0 +1,70 @@
+#FuckBootstrap #x #flipper .wrapper{
+  position: absolute;
+  top: 489px;
+  left: 0;
+  perspective: 1000px;
+}
+
+#FuckBootstrap #x #flipper .wrapper, #FuckBootstrap #x #flipper .front, #FuckBootstrap #x #flipper .back{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: red;
+}
+
+#FuckBootstrap #x #flipper .flipper{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+#FuckBootstrap #x #flipper .front, #FuckBootstrap #x #flipper .back {
+  backface-visibility: hidden;
+  position: absolute;
+}
+ #FuckBootstrap #x #flipper .Phead {
+   backface-visibility: hidden;
+ }
+
+#FuckBootstrap #x #flipper .front{
+  background-color: ;
+  transform: rotateY(-0deg);
+}
+
+#FuckBootstrap #x #flipper .Phead{
+
+    transform: rotateY(-180deg);
+    background-color: #d9d9d9;
+    height: 122vh;
+}
+
+#FuckBootstrap #x #flipper .back #Navmenu {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 5%;
+  background-color: ;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#FuckBootstrap #x #flipper .back #Navmenu * {
+  z-index: 60;
+  transition: all 0.7s ease;
+  padding: 20px;
+  width: 40%;
+  text-align: center;
+  background-color: #737373;
+  line-height: 15vh;
+  margin: 3%;
+  opacity: 2;
+}
+
+#FuckBootstrap #x #flipper .back #Navmenu *:hover, {
+  background-color: #4d4d4d;
+
+}
+
+#FuckBootstrap #x #flipper .back #Navmenu *:hover{
+    transform: scale(1.1);
+}

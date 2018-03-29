@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>area51</title>
+    <style media="screen">
+      body * {
+        float: left;
+      }
+
+      #btn{
+        padding: 10px;
+      }
+      #block{
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        transform: scaleY(1) translateY(0px);
+      }
+
+      #block2{
+        height: 200px;
+        width: 200px;
+        background-color: green;
+        transform: scaleY(1) translateY(0px);
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" id="btn" name="button">Click me!</button>
+    <div id='block'>
+      <h1>block1</h1>
+    </div>
+    <div id='block2'>
+      <h1>block2</h1>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var btn = document.getElementById('btn');
+    var block = document.getElementById('block');
+    var block2 = document.getElementById('block2');
+
+
+    var pos = "100px"
+
+    var db = [];
+    db.push(block, block2);
+
+    function move(index, delay) {
+      this.delay = delay.toString() + 's';
+      db[index].style.transition = 'transform 2s ease-in-out'
+      db[index].style.transitionDelay = this.delay;
+      db[index].style.transform = "scale(1.2) translateY("+pos+")";
+    }
+
+    function log(index, delay) {
+      this.delay = delay * 1000 + 2000;
+      setTimeout(function(){
+        console.log(index);
+      }, this.delay)
+    }
+
+    btn.addEventListener('click', function() {
+      for (var i = 0; i < db.length; i++) {
+        var del = Math.random() * 2 + 1;
+        move(i, del);
+        log(i, del);
+      }
+    })
+  </script>
+</html>

@@ -1,0 +1,54 @@
+.container{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	margin: 10% 0 1% 0;
+}
+
+a {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.first{
+	background-image: url("../images/img1.png");
+}
+
+.second{
+	background-image: url("../images/img3.png");
+}
+
+.third {
+	background-image: url("../images/img3.png");
+}
+
+.forth {
+	background-image: url("../images/img1.png")
+}
+
+a h1 {
+	color: white;
+	font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+}
+
+a div {
+	text-align: center;
+	margin: auto;
+	flex: 0 0 60%
+}
+
+a div hr {
+	display: block;
+	color: white;
+	border-style: solid;
+}
+
+@media screen and (min-width: 1200px){
+		.container{
+			margin-top: 7%;
+		}
+}

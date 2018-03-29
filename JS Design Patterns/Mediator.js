@@ -1,0 +1,5 @@
+/*
+
+The Mediator Pattern
+
+*/

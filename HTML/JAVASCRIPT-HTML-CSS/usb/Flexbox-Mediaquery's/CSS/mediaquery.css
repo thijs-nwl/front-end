@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+}
+
+p {
+	
+}
+
+body {
+	
+}
+
+header {
+	background-color: red ;
+	width: 100%;
+	height: auto;
+	
+}
+
+main {
+	background-color: green;
+	width: 100%;
+	height: auto;
+	
+}
+
+.aside1 {
+	background-color: blue;
+	width: 100%;
+	height: auto;
+	
+}
+
+.aside2 {
+	background-color: yellow;
+	width: 100%;
+	height: auto;
+	
+}
+
+footer {
+	background-color: pink;
+	width: 100%;
+	height: auto;
+	
+}
+
+@media screen and (min-width: 640px){
+	.aside1 {
+		float: left;
+		width: 50%;
+		
+	}
+	
+	.aside2 {
+		float: left;
+		width: 50%;
+		
+	}
+	
+	footer {
+		clear: left;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container-768 {
+		width: auto;
+		
+	}
+	
+	.container-768 main {
+		width: 66.7%;
+		float: left;
+		
+	}
+	
+	.container-768 .aside1 {
+		width: 33.3%;
+		float: left;
+		height: 100%;
+	}
+	
+	.aside2 {
+		clear: left;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container-1024 {
+		width: 100%;
+		
+	}
+	
+	.container-1024 main {
+		width: 60%;
+		float: left;
+		
+	}
+	
+	.container-1024 .aside1 {
+		width: 20%;
+		float: left;
+		
+	}
+	
+	.container-1024 .aside2 {
+		width: 20%;
+		clear: none;
+		
+	}
+	
+	footer {
+		clear: both;
+		width: 100%;
+	}
+}
+
+
+
+

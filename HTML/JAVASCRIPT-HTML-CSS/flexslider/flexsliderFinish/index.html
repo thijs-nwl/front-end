@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEBSITE</title>
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="uft-8" />
+		
+		<!--Flexslider Links-->
+		<link rel="stylesheet" href="flexslider.css" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="jquery.flexslider.js"></script>
+		
+		<!--Flexslider Script-->
+		<script type="text/javascript" charset="utf-8">
+		  $(window).load(function() {
+			$('.flexslider').flexslider({
+			
+			slideshowSpeed: 3500,
+			namespace: "flex-",
+			initDelay: 1000,
+			pauseOnAction: true,
+			touch: true,
+			directionNav: false,
+			randomize: true,
+			}
+			);
+		  });
+		</script>
+	</head>
+	
+	<body>
+		<div class="header">
+			<div id="logo"></div>
+			
+			<div id="menu">
+				<a href="#"><div id="menuLogo"></div></a>
+				<div id="mediaMenu"></div>
+			</div>
+		</div>
+		
+		<div class="flexContainer">
+			<div class="flexslider">
+			  <ul class="slides">
+				<li>
+				  <img src="images/img1.png" class="flexImg1"/>
+				</li>
+				<li>
+				  <img src="images/img2.png" class="flexImg2"/>
+				</li>
+				<li>
+				  <img src="images/img3.png" class="flexImg3"/>
+				</li>
+			  </ul>
+			</div>
+		</div>	
+	</body>
+</html>

@@ -1,0 +1,49 @@
+.container{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	
+}
+
+.first, .second {
+	margin: 20px 20% 20px 20%;
+	height: 49vh;
+}
+
+a {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	flex: 1 1 60%;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.first{
+		background-image: url("img1.png");
+}
+
+.second{
+		background-image: url("img3.png");
+}
+
+a h1 {
+	color: white;
+	font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+}
+
+a div {
+	text-align: center;
+	margin: auto;
+	flex: 0 0 60%
+}
+
+a div hr {
+	display: block;
+	color: white;
+	border-style: solid;
+}
+
+
+

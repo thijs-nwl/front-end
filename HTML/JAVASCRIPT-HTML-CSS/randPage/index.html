@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jose de Backere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="style.css">
+  </head>
+  <style media="screen">
+
+    }
+  </style>
+  <body>
+    <div id="info">
+      <h2>info</h2>
+        <div class="content">
+          <h3>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+          </h3>
+        </div>
+        <div class="profImg">
+          <img src="obama.jpg">
+        </div>
+    </div>
+
+    <div id='contentBox'>
+      <div id="blog">
+          <div id='flipper'>
+              <div class="front">
+                <div class="blogF">
+                  <h2>blog</h2>
+                </div>
+
+              </div>
+              <div class="back">
+                <div class="blogB">
+                    <h2>stukje tekst over wat er in de blog staat</h2>
+                    <a href="blog.html"><h2>Ga naar de blog</h2></a>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="contact">
+        <div id='flipper'>
+            <div class="front">
+                <div class="contactF">
+                  <h2>contact</h2>
+                </div>
+
+            </div>
+            <div class="back">
+              <div class="contactB">
+
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.addEventListener('load', function(){
+      setInterval(rectCalc(), console.log('hey'), 1500);
+    });
+    window.addEventListener('resize', rectCalc);
+
+        var db = [];
+         blog = document.getElementById('blog'),
+         contact = document.getElementById('contact'),
+         front = document.getElementsByClassName('front')[0],
+         back = document.getElementsByClassName('back')[0],
+         front1 = document.getElementsByClassName('front')[1],
+         back1 = document.getElementsByClassName('back')[1],
+
+         db.push(back1, front1, front, back, blog, contact   );
+
+        function rectCalc(){
+          for(i=0; i<db.length;i++){
+            db[i].style.width = window.innerWidth * 0.5  + 'px';
+            db[i].style.height = window.innerHeight * 0.4 + 'px';
+          }
+        }
+  </script>
+</html>

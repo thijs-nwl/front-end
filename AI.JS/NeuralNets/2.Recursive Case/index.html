@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Circuits with Multiple Gates</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    var forwardMultiplyGate = function (a, b) {
+      return a * b;
+    };
+    var forwardAddGate = function (a, b){
+      return a + b;
+    }
+
+    var forwardCircuit = function(x, y, z){
+      var q = forwardAddGate(x, y);
+      var f = forwardMultiplyGate(q, z);
+      return f;
+    }
+
+    var x = -2, y = 5, z = -4;
+    var f = forwardCircuit(x, y, z);
+    console.log(f);
+
+    //chain rule
+    //backpropagation
+    chainrule(x, y, z)
+    function chainrule(x, y, z) {
+      var q = forwardAddGate(x, y)
+      var f = forwardMultiplyGate(q, z)
+
+      //gradient of the Multiply gate wrt its inputs
+      //wrt short for "with respect to"
+      var derivative_f_wrt_z = q;
+      var derivative_f_wrt_q = z;
+
+      // derivative of the ADD gate wrt its inputs
+      var derivative_q_wrt_x = 1.0;
+      var derivative_q_wrt_y = 1.0;
+
+      //chain rule
+      var derivative_f_wrt_x = derivative_q_wrt_x * derivative_f_wrt_q;
+      var derivative_f_wrt_y = derivative_q_wrt_y * derivative_f_wrt_q
+      console.log(derivative_f_wrt_x, derivative_f_wrt_y);
+
+      //final gradient, from above: [-4, -4, 3]
+      var gradient_f_wrt_xyz = [derivative_f_wrt_x, derivative_f_wrt_y, derivative_f_wrt_z]
+
+      //let the inputs respont to the force:
+      var step_size = 0.01;
+      x = x + step_size *derivative_f_wrt_x;
+      y = y + step_size *derivative_f_wrt_y;
+      z = z + step_size *derivative_f_wrt_z;
+
+      //circuit give higher output:
+      var q = forwardAddGate(x,y);
+      var f = forwardMultiplyGate(q,z);
+      console.log(f)
+    }
+
+    //numerical gradient check
+    NG();
+    function NG(){
+      var x = -2, y= 5, z=-4;
+
+      //numerical gradient check;
+      var h = 0.0001;
+      var x_derivative = (forwardCircuit(x+h,y,z) - forwardCircuit(x,y,z)) / h;
+      var y_derivative = (forwardCircuit(x,y+h,z) - forwardCircuit(x,y,z)) / h;
+      var z_derivative = (forwardCircuit(x,y,z+h) - forwardCircuit(x,y,z)) / h;
+      console.log(x_derivative,y_derivative,z_derivative)
+    }
+
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="CSS/toggleMenu.css" />
+<script>
+function toggleNavPanel(x){
+    var panel = document.getElementById(x), maxH="300px" /*  */;
+    if(panel.style.height == maxH){
+        panel.style.height = "0px";
+    } else {
+        panel.style.height = maxH;
+    }
+}
+</script>
+
+</head>
+<body>
+<div id="topbar">
+  <div id="logo">LOGO</div>
+  <div id="sections_btn_holder">
+	<div id="menu">
+		<button class="buttonB" onclick="toggleNavPanel('sections_panel')"></button>
+	</div>
+   </div>
+  <div id="sections_panel">
+	<div id="container">
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Men</a></li>
+				<li><a href="#">Woman</a></li>
+				<li><a href="#">Category</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+</body> 
+</html>

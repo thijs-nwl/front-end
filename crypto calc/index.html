@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>crypto calc</title>
+    <style media="screen">
+      body{
+        background: #646464;
+      }
+
+      #out {
+
+      }
+
+      #out * {
+        height: 50px;
+        font-size: 30
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="nieuw" placeholder="nieuw">
+    <input type="text" id="oud" placeholder="oud">
+    <input type="text" id="inleg" placeholder="inleg">
+    <button type="button" id="btn">calc</button>
+
+    <div id="out">
+
+    </div>
+  </body>
+  <script type="text/javascript">
+    var nieuw;
+    var oud;
+    var delta;
+    var inleg;
+    var deltaI;
+    var del;
+
+    var br = document.createElement("BR")
+    var p = document.createElement("P");
+    var textNode;
+    var txt
+
+    var btn = document.getElementById('btn');
+    var out = document.getElementById('out')
+
+    function delta (){
+      nieuw = document.getElementById('nieuw').value;
+      oud = document.getElementById('oud').value;
+      inleg = document.getElementById('inleg').value;
+      delta = ((nieuw - oud )/oud) * 100;
+      del = 1 + delta/100
+      deltaI = inleg * del;
+
+      txt = 'nieuw: ' + nieuw + '   oud: ' + oud + '   delta:  ' + delta.toFixed(3) + '%' + ' uitkomst: ' + deltaI.toFixed(2);
+
+      textNode = document.createTextNode(txt);
+      p.appendChild(textNode)
+out.appendChild(br)
+      out.appendChild(p);
+
+    };
+
+    var sheet = document.createElement('style');
+
+    document.body.appendChild(sheet);
+
+    btn.addEventListener('click', delta);
+  </script>
+</html>

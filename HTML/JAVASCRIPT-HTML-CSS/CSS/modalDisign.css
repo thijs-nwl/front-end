@@ -1,0 +1,48 @@
+html, body, body * {
+	padding: 0px;
+	margin: 0; 
+	height: 100%;
+}
+
+.container {
+	width: 50%;
+	height: 70%;
+	margin: 20px auto;
+	background-color: #d3d3d3;
+	
+}
+
+.container * {
+	position: relative;
+}
+
+._1 {
+	background-color: red;
+	width: 54%;
+	height: 45%;
+	float: left;
+}
+
+._2 {
+	background-color: green;
+	width: 44%;
+	height: 100%;
+	left: 55%;
+	padding: 5px;
+}
+
+._2 .txt {
+
+	
+	top: -44%;
+}
+
+._3 {
+	background-color: blue;
+	width: 40%;
+	height: 20%;
+	bottom: 37.5%;
+	left: 7.5%;
+	
+}
+

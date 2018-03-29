@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>INTEVAL JAVASCRIPT</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="uft-8">
+	</head>
+	<body>
+		<div id="divResult">
+		
+		</div>
+	</body>
+	<script>
+		var block, kleuren, klen, achtergrond, i;
+		block = document.getElementById("divResult");
+		block.style.width = "200px";
+		block.style.height = "200px";
+		achtergrond = block.style;
+		kleuren = ["blue", "red", "pink", "green"]
+		kleuren.push("orange");
+		klen = kleuren.length;
+		i = 0;
+		
+		
+		
+		
+		function looptru(){
+			for(q=0; q<klen;q++){
+				if(i<klen){
+					achtergrond.backgroundColor = kleuren[i];
+					i++;
+				} else {
+					i = 0;
+				}
+			}
+		};
+		
+		setInterval(looptru, 2000);
+		
+		
+	
+		
+	</script>
+</html>

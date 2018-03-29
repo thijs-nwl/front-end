@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css selectors</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <ul>
+      <li id='LI'>test</li>
+    </ul>
+  </body>
+  <script>
+    var li = document.getElementById('LI');
+
+    li.addEventListener("mouseover", function(){
+    	mouseParent(this);
+    });
+
+    li.addEventListener("mouseout", function(){
+      mouseOutP(this);
+    })
+
+    function mouseParent(child){
+      child.parentElement.style.backgroundColor = 'red';
+    }
+
+    function mouseOutP(child){
+      child.parentElement.style.backgroundColor = 'white';
+    }
+
+  </script>
+</html>

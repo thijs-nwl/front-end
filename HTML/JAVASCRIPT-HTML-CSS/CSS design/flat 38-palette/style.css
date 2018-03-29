@@ -1,0 +1,146 @@
+body, body * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 20vh;
+}
+
+h1 {
+	height: 80%;
+	padding-left: 3px;
+}
+
+nav {
+	height: 20%;
+	
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+nav ul li {
+	float: left;
+	height: 100%;
+}
+
+nav ul li a {
+	display: inline-block;
+	text-align: center;
+	padding:  8% 16px;
+	text-decoration: none;
+	
+}
+
+nav ul li a:hover {
+	
+}
+
+#wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	height: 70vh;
+	width: 100%;
+	
+}
+
+#first {
+	flex: 1 1 68%;
+}
+
+#second {
+	flex: 1 1 30%;
+}
+
+#zijkolom1, #zijkolom2 {
+	height: 49%;
+}
+
+#first, #zijkolom1, #zijkolom2 {
+	padding-left: 3px;
+	padding-top: 3px;
+}
+
+footer {
+	height: 10vh;
+}
+
+
+
+/*BACKGROUND COLORS*/
+
+1D2F3E
+152737
+0F9FB4
+0FB493
+C9E1C1
+
+
+
+
+body {
+	background-color: #;
+}
+
+header {
+	background-color: #1D2F3E;
+}
+
+nav {
+	background-color: #152737;
+}
+
+nav ul li a:hover {
+	background-color: #;
+}
+
+#first {
+	background-color: #0FB493;
+}
+
+#second {
+	background-color: #0F9FB4;
+}
+
+footer {
+	background-color: #C9E1C1;
+}
+
+/*TEXT STYLES*/
+h1 { 
+	color: #111; 
+	font-family: 'Helvetica Neue', sans-serif; 
+	font-weight: bold; letter-spacing: -1px; 
+	line-height: 1; 
+}
+
+
+h2 { 
+	color: #111; 
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 30px; 
+	font-weight: 300; 
+	line-height: 32px; 
+	margin: 0 0 72px; 
+}
+
+
+p { 
+	color: #685206; 
+	font-family: 'Helvetica Neue', sans-serif; 
+	font-size: 14px; 
+	line-height: 24px; 
+	margin: 0 0 24px; 
+	text-justify: inter-word; 
+}
+
+a { 
+	color: #685206; 
+	text-decoration: none; 
+}

@@ -1,0 +1,29 @@
+body *, body {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: #d3d3d3;
+	height: 59px;
+}
+
+nav h1 {
+	text-align: center;
+}
+
+#wss{
+	opacity:0;
+	-webkit-transition:opacity 1.0s linear 0s;
+	transition:opacity 1.0s linear 0s;
+	display: block;
+}
+
+#container {
+	padding: 5px;
+	width: 75vw;
+	height: 390px;
+	border: 1px solid black;
+	margin: 1vh auto;
+	overflow: hidden;
+}

@@ -1,0 +1,60 @@
+#body {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+}
+
+#content{
+  margin: 20px auto;
+  width: 70vw;
+  background-color: green;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+
+    #title{
+      flex: 1 1 100%;
+      background-color: grey;
+    }
+
+        #title h1 {
+          text-align: center;
+        }
+
+    #img{
+      flex: 1 1 100%;
+      background-color: blue;
+    }
+
+        #img img{
+          display: block;
+          margin: 0 auto;
+        }
+
+    #pitch{
+      flex: 1 1 80%;
+    }
+
+    #buy {
+      flex: 1 1 30%;
+      background-color: red;
+    }
+
+        #buy #btnB {
+          height: 30px;
+          width: 70px;
+        }
+
+    #modal #close {
+      flex: 1 1 30%;
+      background-color: yellow;
+    }
+
+         #btnC {
+          position: relative;
+          right: 0;
+
+        }

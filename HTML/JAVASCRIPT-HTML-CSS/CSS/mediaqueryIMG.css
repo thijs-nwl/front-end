@@ -1,0 +1,57 @@
+body, body *{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#menu {
+	width: 33.3333333333%;
+	height: 59px;
+	float: left;
+}
+
+#menuLogo {
+	background-image: url('img/menu147.png');
+}
+
+#menu h2 {
+	display: none;
+}
+
+#logo {
+	float: left;
+	height: 59px;
+	width: 66.6666666667%;
+	background-image: url('img/logo640.png');
+}
+
+@media screen and (min-width: 420px) {
+	#menuLogo {
+		display: none;
+	}
+	
+	#menu h2 {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#logo {
+		background-image: url('img/logo768.png');
+	}
+	
+
+}
+
+@media screen and (min-width: 1024px) {
+	#logo {
+		background-image: url('img/logo1024.png');
+	}
+}
+
+@media screen and (min-width: 1555px) {
+	#logo {
+		background-image: url('img/logo1555.png');
+	}
+}

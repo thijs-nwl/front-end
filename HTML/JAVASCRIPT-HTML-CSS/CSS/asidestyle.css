@@ -1,0 +1,108 @@
+body {
+	margin: 0 auto;
+	width: 70%;
+	margin: 10% auto;
+	height: 1000px;
+	
+}
+
+/*-----HEADER-----*/
+
+
+
+header h1, header p {
+	padding-left: 16px;
+}
+
+
+
+/*-----NAV-----*/
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li a {
+	display: inline-block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	color: black;
+}
+
+nav ul li a:hover {
+	background-color: orange;
+}
+
+
+
+/*-----ARTICLE-----*/
+
+#contentBox {
+	float: left;
+	height: auto;
+	width: 50%;
+	margin: 5%;
+}
+
+article:first-child {
+	margin-top: 5px;
+}
+
+article {
+	margin-top: 5%;
+}
+
+article footer p {
+	padding: 0;
+}
+
+/*-----ASIDE-----*/
+
+aside {
+	margin: 20px;
+	height: 120px;
+	width: 180px;
+	margin-top: 5px;
+}
+
+aside h2 {
+	margin: 0;
+}
+
+.aside {
+	float: left;
+	height: auto;
+	width: 25%;
+	margin-top: 5%;
+	margin-left: 7%;
+	
+}
+
+/*-----SHORTCUT-----*/
+
+article footer, aside h2 {
+	border-bottom: black solid 1px;
+}
+
+article h2, article footer, aside h2 {
+	padding-left: 5px;
+}
+
+article p, aside p {
+	padding: 0 5px;
+}
+
+aside, article, body{
+	border: 1px black solid;
+	word-wrap: break-word;
+}

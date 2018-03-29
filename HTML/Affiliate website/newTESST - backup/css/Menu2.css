@@ -1,0 +1,75 @@
+.wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  perspective: 1000px;
+}
+
+  .wrapper, .front, .back{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+  }
+
+.flipper{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+}
+ .Phead {
+   backface-visibility: hidden;
+ }
+
+.front{
+  background-color: ;
+  transform: rotateY(-0deg);
+}
+
+.back{
+    transform: rotateY(-180deg);
+    background-color: #d9d9d9;
+}
+
+.btn{
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  z-index: 40;
+}
+
+#back #Navmenu {
+  display: none;
+}
+
+#FuckBootstrap #x #flipper .back #Navmenu {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 5%;
+  background-color: ;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#FuckBootstrap #x #flipper .back #Navmenu * {
+  z-index: 60;
+  transition: all 0.7s ease;
+  padding: 20px;
+  width: 40%;
+  text-align: center;
+  background-color: #737373;
+  line-height: 15vh;
+  margin: 3%;
+  opacity: 2;
+}
+
+#FuckBootstrap #x #flipper .back #Navmenu *:hover{
+    transform: scale(1.1);
+    background-color: #4d4d4d;
+    
+}

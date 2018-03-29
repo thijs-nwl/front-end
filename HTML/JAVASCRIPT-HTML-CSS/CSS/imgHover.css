@@ -1,0 +1,41 @@
+body, body * {
+	margin: 0;
+	padding: 0;
+}
+
+#Logo {
+	background-image: url('img/nHoverTest.png');
+	width: 500px;
+	height: 500px;
+}
+
+#Logo ul {
+	display: none;
+	list-style-type: none;
+	width: auto;
+	height: 35px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#Logo li {
+	float: left;
+}
+
+#Logo li a {
+	text-align: center;
+	padding: 8px 12px 15px 12px;
+	text-decoration: none;
+}
+
+#Logo li a:hover {
+	background-color: #d3d3d3;
+}
+
+#Logo:hover {
+	background-image: url('img/aHoverTest.png');
+}
+
+#Logo:hover ul {
+	display: inline-block;
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style media="screen">
+      body {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+      #imgC {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        margin-top: -250px;
+        left: 50%;
+        margin-left: -250px;
+        background-color: #d3d3d3;
+      }
+      #img1{
+        transform: scale(1.1);
+        height: 100%;
+        width: 100%;
+        display: block;
+        visibility: hidden;
+        transition: all 1s ease-out ;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn" type="button" name="button">Click me!</button>
+    <div id="imgC">
+      <img src="img/s.png" alt="" id="img1">
+    </div>
+
+
+  </body>
+  <script type="text/javascript">
+    let btn = document.getElementById('btn');
+    let imgC = document.getElementById('imgC');
+    let img1 = document.getElementById('img1');
+
+    function click(){
+      img1.style.visibility = "visible";
+      img1.style.transform = "scale(1)"
+    }
+
+    btn.addEventListener('click', function(){
+      console.log('hey');
+      click()
+    })
+  </script>
+</html>

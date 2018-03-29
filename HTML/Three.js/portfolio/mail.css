@@ -1,0 +1,48 @@
+input[type=text], input[type=email], textarea {
+  padding: .6180469716em;
+  background-color: #f2f2f2;
+  color: #43454b;
+  outline: 0;
+  font-family: inherit;
+  border: 0;
+  width: 100%;
+  font-size: 14px;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-weight: 400;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125);
+  line-height: 1.618;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+.formbut {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in,box-shadow .3s ease-in;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  background-color: #2196F3;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
+}
+
+
+#formPos{
+  margin: 0 auto;
+  width: 70%;
+  position: relative;
+}
+
+#formPos form *{
+  margin: 10px;
+}
+
+#formPos form button{
+  position: absolute;
+  right: 0px;
+}

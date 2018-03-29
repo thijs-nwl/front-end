@@ -1,0 +1,17 @@
+#1 {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.posModal {
+	position: relative;
+	left: -100%;
+}
+
+.modal-content {
+	
+	width: 40vw;
+	
+}

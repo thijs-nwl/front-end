@@ -1,0 +1,39 @@
+body, body * {
+	margin: 0;
+	padding: 0;
+}
+
+#logo {
+	background-image: url('img/logo640.png');
+	height: 59px;
+	width: 65%;
+	float: left;
+}
+
+#menu {
+	width: 35%;
+	float: left;
+}
+
+#menuPic {
+	background-image: url('img/menu147.png');
+	height: 59px;
+	width: 147px;
+}
+
+#menu h1 {
+	display: none;
+	background-color: #d3d3d3;
+	height: 59px
+}
+
+@media screen and (min-width: 420px) {
+	#menu h1 {
+		display: block;
+	}
+	
+	#menuPic {
+		display: none;
+	}
+}
+

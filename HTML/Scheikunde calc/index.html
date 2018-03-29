@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+    }
+  </style>
+</head>
+<body>
+<label for="MOL">Chemische hoeveelheid: </label>
+<input name="MOL" type="number" id="MOL" value=""><br>
+<label for"VOL">Volume: </label>
+<input name="VOL" type='number' id="VOL" value=""><br>
+<button onclick="getNum()">molariteit</button>
+
+<p id="output"></p>
+
+<script>
+  function getNum(MOL, VOL){
+    this.titel= MOL;
+    this.auteur= VOL;
+  }
+
+  var shit = new getNum('bluber', 'zaad');
+  console.log(shit.titel)
+</script>
+
+</body>
+</html>
+</html>

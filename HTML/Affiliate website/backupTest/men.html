@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>men</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/Menu.css">
+		<link rel="stylesheet" href="css/Menu2.css">
+		<link rel="stylesheet" href="css/MenWoman.css" />
+		<link rel="stylesheet" href="css/reset_normal.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="uft-8" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+
+	<body id="FuckBootstrap">
+		<div class="Phead">
+			<div class="Ccont">
+				<!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+				<input id="toggle" type="checkbox" >
+
+				<!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+				<!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+				<label id="trgt2" class="toggle-container"  onclick="next();">
+					<!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+					<span id="btnC" class="button knop-toggle"></span>
+				</label>
+
+				<!-- The nav menu -->
+				<nav id='trg' class="Navmenu">
+					<h1><a class="Cnav-item" href="home.html">Home</a></h1>
+					<a class="Cnav-item" href="men.html">Men</a>
+					<a class="Cnav-item" href="woman.html">Woman</a>
+					<a class="Cnav-item" href="contact.html">Contact</a>
+				</nav>
+			</div>
+
+			<h1 id="merkpos"><a href="home.html">WatchPoint</a></h1>
+
+		</div>
+		<div id='x'>
+			<div id="flipper">
+					<div id="front">
+
+		<div id="Prcontainer">
+
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m1_title, m1_img, m1_link, m1_txt)"><img src="images/img1.png"</button>
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m2_title, m2_img, m2_link, m2_txt)"><img src="images/img2.png"</button>
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m3_title, m3_img, m1_link, m3_txt)"><img src="images/img3.png"</button>
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m1_title, m1_img, m1_link, m1_txt)"><img src="images/img1.png"</button>
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m2_title, m2_img, m2_link, m2_txt)"><img src="images/img2.png"</button>
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m3_title, m3_img, m1_link, m3_txt)"><img src="images/img3.png"</button>
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m1_title, m1_img, m1_link, m1_txt)"><img src="images/img1.png"</button>
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m2_title, m2_img, m2_link, m2_txt)"><img src="images/img2.png"</button>
+			<button type="button"  class="bProduct" data-toggle="modal" data-target="#1" onclick="modal_1(m3_title, m3_img, m1_link, m3_txt)"><img src="images/img3.png"</button>
+		</div>
+			<!-- Modal -->
+			<div id="1" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+					  <div class="modal-header">
+						<h4 class="modal-title" id ="_h4"></h4>
+					  </div>
+
+					  <div class="modal-body">
+							<div class="imgContainer" id="_img"></div>
+
+							<div class="txtC"><p id="_txt"></p></div>
+
+							<div id="_link" ><a id="_alink" class="btn btn-primary btn-lg" href="#" ><p>Buy</p></a></div>
+
+							<div class="posClose"><button type="button" id="closeCtn" class="btn btn-default" data-dismiss="modal">Close</button></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="back">
+			<nav id="Navmenu">
+				<a href="home.html"><h1>Home</h1></a>
+				<a href="men.html"><h1>Men</h1></a>
+				<a href="woman.html"><h1>Woman</h1></a>
+				<a href="contact.html"><h1>Contact</h1></a>
+			</nav>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/Menu.js"></script>
+		<script>
+			function modal_1(title, img, link, text) {
+				document.getElementById("_h4").innerHTML = title;
+				document.getElementById("_img").innerHTML = img;
+				document.getElementById("_link").href = link;
+				document.getElementById("_txt").innerHTML = text
+			}
+
+			var m1_title = "Product1";
+			var m1_img = "<img src='images/img1.png'>";
+			var m1_link = "woman.html";
+			var m1_txt = "De Samsung UE32J5100 is met zijn 32 inch-formaat een goede match voor een kleine woonkamer of slaapkamer. Sluit een Blu-ray-speler of mediaspeler aan via HDMI en geniet bij films en series van elk detail dankzij de Full HD-resolutie. De televisie uit de J5100-serie speelt ook mediabestanden af van een usb-stick. Met de ingebouwde DVB-tuner ontvang je digitale televisie, dat scheelt weer een extra decoder. Deze tv wordt ook wel Samsung UE32J5100AW genoemd."
+
+			var m2_title = "Product2";
+			var m2_img = "<img src='images/img2.png'>";
+			var m2_link = "woman.html";
+			var m2_txt = "dit is de tweede text";
+
+			var m3_title = "Product3";
+			var m3_img = "<img src='images/img3.png'>";
+			var m3_link = "woman.html";
+			var m3_txt = "dit is de derde text";
+		</script>
+	</body>
+<html>

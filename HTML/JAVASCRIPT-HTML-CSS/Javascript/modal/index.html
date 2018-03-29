@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/basic.css">
+		<link rel="stylesheet" href="css/Menu.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="uft-8" />
+		
+		<!--Flexslider Links-->
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		
+		<!--Flexslider Script-->
+		<script type="text/javascript" charset="utf-8">
+		  $(window).load(function() {
+			$('.flexslider').flexslider({
+			
+			slideshowSpeed: 3500,
+			namespace: "flex-",
+			initDelay: 1000,
+			pauseOnAction: true,
+			touch: true,
+			directionNav: false,
+			randomize: true,
+			controlNav: false,
+			}
+			);
+		  });
+		</script>
+		
+		<!--toggleMenu Script-->
+		<script>
+		function toggleNavPanel(x){
+			var panel = document.getElementById(x), maxH="250px" /*  */;
+			if(panel.style.height == maxH){
+				panel.style.height = "0px";
+			} else {
+				panel.style.height = maxH;
+			}
+		}
+</script>
+	</head>
+	
+	<body>
+		<div class="header">
+			<div id="logo"><a href="index.html"><h1 style="color: #0000EE;">LOGO</h1></a></div><!--DIT IS waar de logo's komen-->
+			
+			<div id="menu"><!--DIT IS EEN CONTAINER VOOR #menuLogo #mediaMenu-->
+				<div class="menuLogoContainer">
+					<div id="sections_btn_holder">
+						<!--Dit is de knop voor het toggleMenu-->
+						<div id="menuLogo">
+							<button class="buttonB" onclick="toggleNavPanel('sections_panel')"></button>
+						</div>
+					</div>
+					
+					<!--Dit is het menu dat naar beneden komt-->
+					   <div id="sections_panel">
+							<div id="container">
+								<nav>
+									<ul>
+										<li><a href="Men.html">Men</a></li>
+										<li><a href="Woman.html">Woman</a></li>
+										<li><a href="Brands.html">Brands</a></li>
+										<li><a href="Contact.html">Contact</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+				</div>
+				
+				<!--Dit is het text menu vanaf een bepaalde query-->
+				<div id="menuText">
+					<nav>
+						<ul>
+							<li><a href="Men.html">Men</a></li>
+							<li><a href="Woman.html">Woman</a></li>
+							<li><a href="Brands.html">Brands</a></li>
+							<li><a href="Contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		
+		<!--Dit is de img slider-->
+		<div class="flexContainer">
+			<div class="flexslider">
+			  <ul class="slides">
+				<li>
+				  <img src="images/img1.png" class="flexImg1"/>
+				</li>
+				<li>
+				  <img src="images/img2.png" class="flexImg2"/>
+				</li>
+				<li>
+				  <img src="images/img3.png" class="flexImg3"/>
+				</li>
+			  </ul>
+			</div>
+		</div>	
+		
+		<!--LINKS VEDER-->
+		<ul class="cMenWoman">
+			<li><a href="#"><h2>Men</h2></a></li>
+			<li><a href="#"><h2>Woman<h2></a></li>
+		</ul>
+		
+		<ul class="cAmerk">
+			<li><a href="#"><h2>Merk1</h2></a></li>
+			<li><a href="#"><h2>Merk2</h2></a></li>
+			<li><a href="#"><h2>Merk3</h2></a></li>
+			<li><a href="#"><h2>Merk4</h2></a></li>
+			<li><a href="#"><h2>Merk5</h2></a></li>
+		</div>
+	</body>
+</html>

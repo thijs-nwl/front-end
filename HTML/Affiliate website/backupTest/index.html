@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>ding</title>
+  </head>
+  <style>
+  #wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    perspective: 1000px;
+  }
+  /*#wrapper:hover #flipper {
+    transform: rotateY(-180deg);
+  }*/
+
+    #wrapper, .front, .back{
+      width: 100vw;
+      height: 100vh;
+      text-align: center;
+    }
+
+  #flipper{
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+  }
+
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .front{
+
+    background-color: green;
+    transform: rotateY(-0deg);
+  }
+
+  .back{
+      transform: rotateY(-180deg);
+      background-color: red;
+
+  }
+
+  .btn{
+    position: absolute;
+    top: 300px;
+    left: 300px;
+  }
+  </style>
+  <body>
+
+
+    <div id="wrapper">
+      <div id="flipper">
+          <div class="front">
+            <h1>Front</h1>
+          </div>
+          <div class="back">
+            <h1>Back</h1>
+          </div>
+      </div>
+    </div>
+<button class="btn" type="button" name="button" onclick="toggle();">click me</button>
+  <body>
+  <script>
+  var flipper = document.getElementById('flipper');
+  function toggle() {
+  if(flipper.style.WebkitTransform == "rotateY(180deg)"||flipper.style.msTransform == "rotateY(180deg)"||flipper.style.transform == "rotateY(180deg)"){
+    flipper.style.WebkitTransform = "rotateY(0deg)";
+    flipper.style.msTransform = "rotateY(0deg)";
+    flipper.style.transform = "rotateY(0deg)";
+  } else{
+    flipper.style.WebkitTransform = "rotateY(180deg)";
+    flipper.style.msTransform = "rotateY(180deg)";
+    flipper.style.transform = "rotateY(180deg)";
+  }
+}
+  </script>
+</html>

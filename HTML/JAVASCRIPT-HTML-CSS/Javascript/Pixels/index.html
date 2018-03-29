@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pixel distance</title>
+    <style>
+      #trgt {
+        width: inherit;
+        height: inherit;
+        background-color: red;
+        position: absolute;
+        top:200px;
+        left: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div onclick="changedis()"><img src="img1.png"/></div>
+  </body>
+  <script>
+    var div = document.getElementById('trgt');
+    var dis = div.getClientRects();
+    console.log(dis);
+
+    function changedis(){
+      div.style.top = "100px"
+      var dis = div.getClientRects();
+      console.log(dis);
+    }
+  </script>
+</html>

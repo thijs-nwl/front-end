@@ -1,0 +1,102 @@
+body, body * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 20vh;
+}
+
+h1 {
+	height: 80%;
+	padding-left: 3px;
+}
+
+nav {
+	height: 20%;
+	
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+nav ul li {
+	float: left;
+	height: 100%;
+}
+
+nav ul li a {
+	display: inline-block;
+	text-align: center;
+	padding:  8% 16px;
+	text-decoration: none;
+	
+}
+
+nav ul li a:hover {
+	
+}
+
+#wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	height: 70vh;
+	width: 100%;
+	
+}
+
+#first {
+	flex: 1 1 68%;
+}
+
+#second {
+	flex: 1 1 30%;
+}
+
+#zijkolom1, #zijkolom2 {
+	height: 49%;
+}
+
+#first, #zijkolom1, #zijkolom2 {
+	padding-left: 3px;
+	padding-top: 3px;
+}
+
+footer {
+	height: 10vh;
+}
+
+/*BACKGROUND COLORS*/
+
+body {
+	background-color: ;
+}
+
+header {
+	background-color: ;
+}
+
+nav {
+	background-color: ;
+}
+
+nav ul li a:hover {
+	background-color: ;
+}
+
+#first {
+	background-color: ;
+}
+
+#second {
+	background-color: ;
+}
+
+footer {
+	background-color: ;
+}

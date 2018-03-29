@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>autoScroll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="basic.css">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div id="heading">
+      <nav>
+        <ul>
+          <li><a id="a" data-id="about" href="#About Us">About Us</a></li>
+          <li><a id="p" data-id="price" href="#Pricing">Pricing</a></li>
+          <li><a id="w" data-id="work" href="#Working">Working</a></li>
+          <li><a id="c" data-id="rand" href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="trgt">
+      <div id="about" class="sec">
+        <h1>About Us</h1>
+      </div>
+
+      <div class="circle"></div>
+
+      <div id="price" class="sec">
+        <h1>Pricing</h1>
+      </div>
+
+      <div id="work" class="sec">
+        <h1>Working</h1>
+      </div>
+
+      <div id="rand" class="sec">
+        <h1>Contact</h1>
+      </div>
+    </div>
+  </body>
+  <script>
+    var db = [],
+        a = document.getElementById('a'),
+        p = document.getElementById('p'),
+        w = document.getElementById('w'),
+        c = document.getElementById('c');
+
+    db.push(a, p, w, c);
+
+    for(i=0; i<db.length; i++){
+      db[i].addEventListener("click", function(){
+        move(this);
+      });
+    }
+
+    function move (elem){
+      var anim = setInterval(scroll, 10),
+          stop = 0,
+          id = elem.getAttribute("data-id"),
+          trgt = document.getElementById(id),
+          dist = trgt.getBoundingClientRect().top;
+      dist -= 80;
+
+      function scroll(){
+        if(dist > 0){
+          if(stop >= dist){
+            clearInterval(anim)
+            console.log(stop)
+          } else {
+            window.scrollBy(0, 20);
+            stop += 20;
+          }
+        } else if(stop <= dist){
+              clearInterval(anim);
+            } else {
+              window.scrollBy(0, -20)
+              stop -= 20;
+            }
+          }
+        }
+  </script>
+</html>

@@ -1,0 +1,55 @@
+/*-----BASIC STYLES-----*/
+* {
+	margin: 0;
+}
+
+header {
+	background-color: red;
+}
+
+main {
+	background-color: green;
+}
+
+.zijkolom-1 {
+	background-color: blue;
+} 
+
+.zijkolom-2 {
+	background-color: orange;
+}
+
+footer {
+	background-color: yellow;
+}
+
+/*-----FLEXBOX-----*/
+
+.container {
+	display: flex;
+	-moz-flex-flow: row wrap;
+}
+
+header, main, .zijkolom-1, .zijkolom-2, footer {
+	-moz-flex: 1 1 100%;
+}
+
+@media screen and (min-width: 40em) { /* vanaf 640px (16*40) */
+	.zijkolom-1, .zijkolom-2 {
+		-moz-flex: auto;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		-moz-flex: 2 1 0%;
+	}
+	
+	.zijkolom-1 {
+		-moz-flex: 1 1 0%;
+	}
+	
+	.zijkolom-2 {
+		-moz-flex: 1 1 100%;
+	}
+}

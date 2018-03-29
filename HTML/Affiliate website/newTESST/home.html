@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>home</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/Menu.css">
+		<link rel="stylesheet" href="css/links.css">
+		<link rel="stylesheet" href="css/Menu2.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="uft-8" />
+		<!--Flexslider Links-->
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+	</head>
+
+<body id="FuckBootstrap">
+	<div class="Phead">
+		<div class="Ccont">
+			<!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+			<input id="toggle" type="checkbox" >
+
+			<!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+			<!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+			<label id="trgt2" class="toggle-container"  onclick="next();">
+				<!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+				<span id="btnC" class="button knop-toggle"></span>
+			</label>
+
+			<!-- The nav menu -->
+			<nav id='trg' class="Navmenu">
+				<h1><a class="Cnav-item" href="home.html">Home</a></h1>
+				<a class="Cnav-item" href="men.html">Men</a>
+				<a class="Cnav-item" href="woman.html">Woman</a>
+				<a class="Cnav-item" href="contact.html">Contact</a>
+			</nav>
+		</div>
+
+		<h1 id="merkpos"><a href="home.html">WatchPoint</a></h1>
+
+	</div>
+<div id='x'>
+	<div id="flipper">
+			<div id="front">
+				<!--Dit is de img slider-->
+				<div class="flexContainer">
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<img src="images/img1.png" class="flexImg1"/>
+							</li>
+							<li>
+								<img src="images/img2.png" class="flexImg2"/>
+							</li>
+							<li>
+								<img src="images/img3.png" class="flexImg3"/>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--LINKS VEDER-->
+				<div id="links" class="container">
+					<a class="first" href="men.html"><div><h1><hr>MEN<hr><h1></div></a>
+					<a class="second" href="woman.html"><div><h1><hr>WOMAN<hr><h1></div></a>
+					<a class="third" href="men.html"></a>
+					<a class="forth" href="woman.html"></a>
+				</div>
+			</div>
+
+			<div id="back">
+				<nav id="Navmenu">
+					<a href="home.html"><h1>Home</h1></a>
+					<a href="men.html"><h1>Men</h1></a>
+					<a href="woman.html"><h1>Woman</h1></a>
+					<a href="contact.html"><h1>Contact</h1></a>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="js/Menu.js"></script>
+
+<!--Flexslider Script-->
+<script type="text/javascript" charset="utf-8">
+	$(window).load(function() {
+	$('.flexslider').flexslider({
+	slideshowSpeed: 3500,
+	namespace: "flex-",
+	initDelay: 1000,
+	pauseOnAction: true,
+	touch: true,
+	directionNav: false,
+	randomize: true,
+	controlNav: false,
+	}
+	);
+	});
+</script>
+</html>

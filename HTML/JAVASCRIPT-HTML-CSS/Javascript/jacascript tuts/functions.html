@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>functions</title>
+		<meta charset="uft-8"/>
+		
+	</head>
+	<body>
+		
+		<p id="_a">leeg</p>
+		<br>
+		
+		<button onclick= "test(4, 5)">click</button>
+		
+		<p id="_b" >leeg</p>
+		
+		
+		
+		<p id="string" ></p>
+		
+		<button id="cat" ></button>
+		
+		<button onclick="naam(mijnNaam)" id="test"></button>
+		
+	</body>
+	
+	<script>
+	/*plaats de function in var x fuction bestaat uit parameters a, b wat er voor a en b wordt ingevuld wordt keer elkaar gedaan de function hoeft geen naam doordat het in een var zit die wel een naam heeft 
+		dus de functie x kun je ook weer in een var plaatsen z en die kun je simpel aanpassen hoeft niet*/
+	
+	
+	function test(a, b) {
+		document.getElementById("_a").innerHTML = a;
+		document.getElementById("_b").innerHTML = b;
+	};
+	
+	//loop uit zichzelf door de haakjes kijk maar op w3schools voor naam
+	var y = "hello";
+	(function thijs() {
+		document.getElementById("string").innerHTML = y;
+	})();
+	
+	//
+	var cat = {
+		name: 'Kitten',
+		toString: function () {
+			return this.name + 'meow';
+		}
+	};
+	document.getElementById("cat").innerHTML = cat;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////
+	//deze kunnen we gebruiken///////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////
+	//global var declareren
+	var mijnNaam = "<img src='img1.png'>"
+	//functie
+	function naam(naam) {
+		document.getElementById("test").innerHTML = '<h2>uw naam is: ' + naam + '</h2>';
+	}
+	// 3. functie aanroep = onclick in button
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+</html>

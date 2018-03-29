@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Machine Learning: SVM</title>
+  </head>
+  <body style='background: black'>
+
+  </body>
+  <script type="text/javascript">
+  var Unit = function(value, grad) {
+    this.value = value;
+    this.grad = grad;
+  }
+
+  var multiplyGate = function () {};
+  multiplyGate.prototype = {
+    forward: function(u0, u1){
+      this.u0 = u0;
+      this.u1 = u1;
+      this.utop = new Unit(u0.value * u1.value, 0.0);
+      return this.utop;
+    },
+    backward: function(){
+      this.u0.grad += this.u1.value * this.utop.grad;
+      this.u1.grad += this.u0.value * this.utop.grad;
+    }
+  }
+
+  var addGate = function(){};
+  addGate.prototype = {
+    forward: function(u0, u1){
+      this.u0 = u0;
+      this.u1 = u1;
+      this.utop = new Unit(u0.value + u1.value, 0.0);
+      return this.utop;
+    },
+    backward: function(){
+      this.u0.grad += 1 * this.utop.grad;
+      this.u1.grad += 1 * this.utop.grad;
+    }
+  }
+
+  var sigmoidGate = function(){
+    this.sig = function(x) {return 1 / (1 + Math.exp(-x));};
+  };
+  sigmoidGate.prototype = {
+    forward: function(u0){
+      this.u0 = u0;
+      this.utop = new Unit(this.sig(this.u0.value), 0.0);
+      return this.utop;
+    },
+    backward: function(){
+      var s = this.sig(this.u0.value);
+      this.u0.grad += (s *(1 - s)) * this.utop.grad;
+    }
+  };
+
+  // A circuit: it takes 5 Units (x,y,a,b,c) and outputs a single Unit
+  // It can also compute the gradient w.r.t. its inputs
+  var Circuit = function() {
+
+    this.mulg0 = new multiplyGate();
+    this.mulg1 = new multiplyGate();
+    this.sigg0 = new sigmoidGate();
+    this.sigg1 = new sigmoidGate();
+  };
+  Circuit.prototype = {
+    forward: function(x,y,w1,w2) {
+
+    },
+    backward: function(gradient_top) { // takes pull from above
+      this.yh.grad = gradient_top;
+
+    }
+  }
+  // SVM class
+  var SVM = function() {
+
+    // random initial parameter values
+    this.w1 = new Unit(1.0, 0.0);
+    this.w2 = new Unit(-2.0, 0.0);
+
+    this.circuit = new Circuit();
+  };
+  SVM.prototype = {
+    forward: function(x, y) { // assume x and y are Units
+      this.unit_out = this.circuit.forward(x, y, this.w1, this.w2);
+      return this.unit_out;
+    },
+    backward: function(label) { // label is +1 or -1
+
+    },
+    learnFrom: function(x, y, label) {
+      this.forward(x, y); // forward pass (set .value in all Units)
+      this.backward(label); // backward pass (set .grad in all Units)
+      this.parameterUpdate(); // parameters respond to tug
+    },
+    parameterUpdate: function() {
+      var step_size = 0.01;
+      this.w1.value += step_size * this.w1.grad;
+      this.w2.value += step_size * this.w2.grad;
+    },
+    console: function(){
+      console.log(this.w1.value + "||" + this.w2.value)
+    }
+  };
+
+  </script>
+</html>

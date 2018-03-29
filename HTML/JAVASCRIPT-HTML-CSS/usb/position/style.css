@@ -1,0 +1,73 @@
+ul {
+		background-color: #999;
+		position: fixed;
+		top: 0;
+		width: 100%;
+}
+
+ul * {
+	display: inline-block;
+	
+}
+
+ul li a {
+	padding: 20px 40px;
+	text-decoration: none;
+	color: white;
+	background-color: #666;
+	z-index: 1;
+}
+
+ul li a#test2:hover {
+	background-color: blue;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+}
+
+#test3 {
+	position: absolute;
+	top: 0;
+}
+
+
+
+
+
+
+
+#blocks {
+	height: 500px;
+	background-color: #999;
+	margin-top: 50px;
+	position: relative;
+}
+
+.block1 {
+	background-color: red;
+	height: 300px;
+	width: 200px;
+	border-radius: 10px;
+	position: absolute;
+	top: 20px;
+	left: 500px;
+}
+
+.block2 {
+	background-color: green;
+	height: 100px;
+	width: 75px;
+	border-radius: 10px;
+	position: relative;
+	
+}
+
+.block3 {
+	background-color: yellow;
+	height: 200px;
+	width: 125px;
+	border-radius: 10px;
+	position: absolute;
+	left: 150px;
+	top: 300px;
+}

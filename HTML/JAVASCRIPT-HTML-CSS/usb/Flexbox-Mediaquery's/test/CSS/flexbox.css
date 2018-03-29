@@ -1,0 +1,135 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*-----FLEXBOX-----*/
+.container {
+	display: flex;
+	height: 500px;
+	padding: 3px;
+	justify-content: center;
+	overflow: hidden;
+}
+
+/*-----PARENTS-----*/
+.first{
+	display: flex;
+	margin: 2.5px;
+	border: 1px solid black;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+.second{
+	display: flex;
+	margin: 2.5px;
+	border: 1px solid black;
+	flex: 1 1 auto;
+	flex-flow: column no-wrap;
+}
+
+
+
+.first * {
+	flex: 1 1 auto;
+	margin: 3px;
+}
+
+.second * {
+	flex: 1 1 100px;
+	margin: 3px;
+}
+
+
+
+/*-----ITEMSfirst-----*/
+
+.block1 {
+	background-color: red ;
+	align-self: flex-start;
+	
+}
+
+.block2 {
+	background-color: blue;
+	
+}
+
+.block3 {
+	background-color: yellow;
+}
+
+.block4 {
+	background-color: green;
+	
+}
+
+.block5 {
+	background-color: pink;
+}
+
+.block6 {
+	background-color: orange;
+}
+
+/*-----ITEMSsecond-----*/
+
+#block1 {
+	background-color: red;
+	
+}
+
+#block2 {
+	background-color: blue;
+	flex-shrink: 3;
+}
+
+#block3 {
+	background-color: yellow;
+}
+
+#block4 {
+	background-color: green;
+	flex-shrink: .5;
+}
+
+#block5 {
+	background-color: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.normal {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	margin-top: 20px;
+}
+
+.container {
+	border: 5px solid black;
+
+}
+
+body {
+	background-color: #666;
+	margin: 20px;
+	width: 90%;
+	
+}
+
+
+
+
+
+

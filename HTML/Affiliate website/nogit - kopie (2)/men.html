@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>men</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/Menu.css">
+		<link rel="stylesheet" href="css/links.css">
+		<link rel="stylesheet" href="css/Menu2.css">
+		<link rel="stylesheet" href="css/MenWoman.css" />
+		<link rel="stylesheet" href="css/reset_normal.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="uft-8" />
+	</head>
+
+	<body id="FuckBootstrap">
+		<div class="Phead">
+			<div class="Ccont">
+				<!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+				<input id="toggle" type="checkbox" >
+
+				<!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+				<!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+				<label id="trgt2" class="toggle-container"  onclick="next();">
+					<!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+					<span id="btnC" class="button knop-toggle"></span>
+				</label>
+
+				<!-- The nav menu -->
+				<nav id='trg' class="Navmenu">
+					<h1><a class="Cnav-item" href="home.html">Home</a></h1>
+					<a class="Cnav-item" href="men.html">Men</a>
+					<a class="Cnav-item" href="woman.html">Woman</a>
+					<a class="Cnav-item" href="contact.html">Contact</a>
+				</nav>
+			</div>
+
+			<h1 id="merkpos"><a href="home.html">WatchPoint</a></h1>
+
+		</div>
+		<div id='x'>
+			<div id="flipper">
+					<div id="front">
+						<div id="Prcontainer">
+							<button type="button" class="bProduct" id='myBtn' data-num="0"><img src="images/img1.png"></button>
+							<button type="button" class="bProduct" id='myBtn' data-num="1"><img src="images/img2.png"></button>
+							<button type="button" class="bProduct" id='myBtn' data-num="2"><img src="images/img3.png"></button>
+							<button type="button" class="bProduct" id='myBtn' data-num="3"><img src="images/img1.png"></button>
+							<button type="button" class="bProduct" id='myBtn' data-num="4"><img src="images/img2.png"></button>
+							<button type="button" class="bProduct" id='myBtn' data-num="5"><img src="images/img3.png"></button>
+						</div>
+					</div>
+
+		<div id="back">
+			<nav id="Navmenu">
+				<a href="home.html"><h1>Home</h1></a>
+				<a href="men.html"><h1>Men</h1></a>
+				<a href="woman.html"><h1>Woman</h1></a>
+				<a href="contact.html"><h1>Contact</h1></a>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span class="close">&times;</span>
+			<h2></h2>
+		</div>
+		<div class="modal-body">
+			<img id="_img" src="" />
+			<p></p>
+		</div>
+		<div class="modal-footer">
+			<button>buy</button>
+		</div>
+	</div>
+</div>
+
+</body>
+<script src="js/Menu.js"></script>
+		<script>
+			var db = [];
+			var modal = document.getElementById('myModal');
+			var span = document.getElementsByClassName("close")[0];
+			var btn = document.getElementsByClassName("bProduct");
+			var mdl = document.getElementsByClassName("modal")[0];
+			var _title = document.getElementsByClassName('modal-header')[0].getElementsByTagName('H2')[0];
+			var _img = document.getElementById('_img');
+
+			var Pros = {
+         Pro1 : {
+              title: "Product1",
+              img: "images/img1.png"
+          },
+         Pro2 : {
+              title: "Product2",
+              img: "images/img2.png"
+          },
+         Pro3 : {
+              title: "Product3",
+              img: "images/img3.png"
+          },
+         Pro4 : {
+              title: "Product4",
+              img: "images/img1.png"
+          },
+         Pro5 : {
+              title: "Product5",
+              img: "images/img2.png"
+          },
+          Pro6 : {
+              title:'Product6',
+              img: "images/img3.png"
+          }
+      }
+
+
+			for(var i=0; i<btn.length; i++){
+				var num = i+1;
+        var lock ='Pro'+num;
+        db.push(lock);
+				btn[i].addEventListener('click', function(){
+          klik(this);
+        });
+				btn[i].addEventListener("click", fClick);
+			}
+
+			function klik (data) {
+        var y = parseInt(data.getAttribute('data-num'));
+        _title.innerHTML = Pros[db[y]].title;
+     		_img.src = Pros[db[y]].img;
+      }
+
+			function fClick () {
+				modal.style.height = window.innerHeight + "px";
+				modal.style.display = "block";
+				modal.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+
+			span.onclick = function() {
+					modal.style.display = "none";
+			}
+
+			window.onclick = function(event) {
+					if (event.target == modal) {
+							modal.style.display = "none";
+					}
+			}
+			// var m1_title = "Product1";
+			// var m1_img = "<img src='images/img1.png'>";
+			// var m1_link = "woman.html";
+			// var m1_txt = "De Samsung UE32J5100 is met zijn 32 inch-formaat een goede match voor een kleine woonkamer of slaapkamer. Sluit een Blu-ray-speler of mediaspeler aan via HDMI en geniet bij films en series van elk detail dankzij de Full HD-resolutie. De televisie uit de J5100-serie speelt ook mediabestanden af van een usb-stick. Met de ingebouwde DVB-tuner ontvang je digitale televisie, dat scheelt weer een extra decoder. Deze tv wordt ook wel Samsung UE32J5100AW genoemd."
+		</script>
+<html>

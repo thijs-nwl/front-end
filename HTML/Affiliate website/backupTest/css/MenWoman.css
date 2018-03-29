@@ -1,0 +1,94 @@
+/*alles voor 250px*/
+#Prcontainer * {
+	min-width: 40vw;
+	max-width: 92%;
+	height: auto;
+	margin: 3px;
+}
+
+
+#Prcontainer {
+	margin-top: 45px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+@media screen and (min-width: 918px)  {
+	#Prcontainer * {
+		margin: 10px;
+		min-width: 32%;
+	}
+
+}
+
+@media screen and (min-width: 450px) and (max-width: 600px) {
+	#Prcontainer * {
+		min-width: 80%;
+		margin: 5px;
+	}
+}
+
+/*MODAL STYLES*/
+
+/*----CONTAINER----*/
+.modal-content {
+	height: 75vh;
+
+}
+
+.modal-content *{
+	border: none;
+	z-index: 200;
+}
+
+
+/*----BODY----*/
+
+.modal-body * {
+	position: static;
+}
+.modal-body {
+	border: none;
+	background-color: #d3d3d3;
+	position: relative;
+}
+
+
+.modal-body .imgContainer img{
+	width: 90%;
+	height: auto;
+}
+
+.modal-body .imgContainer {
+	margin: 0 auto;
+}
+
+.modal-body #_link {
+	width: 40%;
+	height: 10%;
+	bottom: 27%;
+}
+
+.modal-body #_alink {
+	width: 100%;
+	height: 100%;
+}
+
+.modal-body .posClose {
+	bottom: 15%;
+	left: 80%;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}

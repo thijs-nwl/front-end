@@ -1,0 +1,5 @@
+/*
+
+The Revealing Module Pattern
+
+*/

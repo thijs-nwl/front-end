@@ -1,0 +1,21 @@
+body {
+	
+	background-image: url('background-image.jpg');
+	background-size: cover;
+	
+}
+
+#body {
+	margin: 0 auto;
+	width: 70%;
+	border: 1px solid black;
+	height: auto;
+}
+
+#content {
+	
+}
+
+h2 {
+	color: #BD9CDE;
+}

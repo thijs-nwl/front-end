@@ -1,0 +1,36 @@
+body, body * {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: grey;
+	display: block;
+	width: 30vw;
+	height: 20vh;
+	opacity: 0.6;
+	visibility: hidden;
+}
+
+#cb{
+	width: 20vw;
+	height: 13vh;
+	visibility: visible;
+	opacity: 1;
+}
+
+#box1{
+	background-color: blue;
+	width: 40vw;
+	height: 10vh;
+	position: absolute;
+	top: 0;
+	right: 40vw;
+}
+
+#txt {
+	visibility: hidden;
+}
